@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.Interop;
 
 namespace SpotsDialogLib.lib
 {
@@ -20,21 +21,25 @@ namespace SpotsDialogLib.lib
         {
         }
 
+        [Export]
         public float getXFactor()
         {
             return GetX() / target;
         }
 
+        [Export]
         public void setXFactor(float xFactor)
         {
             SetX(target * xFactor);
         }
 
+        [Export]
         public void setTarget(int target)
         {
             this.target = target;
         }
 
+        [Export]
         public int getTarget()
         {
             return target;

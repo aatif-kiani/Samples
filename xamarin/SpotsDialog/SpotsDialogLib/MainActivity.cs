@@ -24,7 +24,9 @@ namespace SpotsDialogLib
 
             button.Click += delegate {
                 //button.Text = string.Format("{0} clicks!", count++); 
-                new SpotsDialogLib.lib.SpotsDialog( this ).Show();
+                SpotsDialogLib.lib.SpotsDialog d = new SpotsDialogLib.lib.SpotsDialog( this );
+                d.Create();
+                d.Show();
             };
         }
     }

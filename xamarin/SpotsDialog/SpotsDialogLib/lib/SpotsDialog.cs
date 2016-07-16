@@ -76,7 +76,7 @@ namespace SpotsDialogLib.lib
             animator.stop();
         }
 
-        public void setMessage(ICharSequence message)
+        public override void SetMessage(ICharSequence message)
         {
             ((TextView)FindViewById(Resource.Id.dmax_spots_title)).Text = Convert.ToString(message);
         }
@@ -100,9 +100,7 @@ namespace SpotsDialogLib.lib
             for (int i = 0; i < spots.Length; i++)
             {
                 AnimatedView v = new AnimatedView(Application.Context);
-                //v.SetBackgroundDrawable(s);
                 v.SetBackgroundResource(Resource.Drawable.dmax_spots_spot);
-                v.SetBackgroundColor(Android.Graphics.Color.Black);
                 v.setTarget(progressWidth);
                 v.setXFactor(-1f);
                 progress.AddView(v, size, size);
